@@ -26,10 +26,10 @@ Originally forked by T00rk.
 ### Usage
 
 Use standard settings:
-	`$('input').bootstrapMaterialDatePicker();`
+        `$('input').bootstrapMaterialDatePicker();`
 	
 Define some extra settings:
-  `$('#date').bootstrapMaterialDatePicker({
+        `$('#date').bootstrapMaterialDatePicker({
 		format : 'dddd, DD. MMMM YYYY - HH:mm',
 		nowButton : true,
 		clearButton : false,
