@@ -4,7 +4,7 @@ Originally designed for Bootstrap Material, the V2.0 is now completely standalon
 Originally forked by T00rk.
 
 ## UM AUF DEUTSCH ZU STELLEN:
-**It's a multilingual version, you can change the language in the .js file!**
+**It's a multilingual version, you can change the language in the .js file (line 6)!**
 
 
 ### Prerequisites
