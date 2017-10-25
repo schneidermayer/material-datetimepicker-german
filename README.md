@@ -11,7 +11,7 @@ Originally forked by T00rk.
 
 * jquery [http://jquery.com/download/](http://jquery.com/download/)
 
-* momentjs [http://momentjs.com/](http://momentjs.com/)
+* momentjs (with locales!) [http://momentjs.com/](http://momentjs.com/)
 
 * Google Fonts (place in <head> before the datetimepicker.css):
 
@@ -28,10 +28,10 @@ Originally forked by T00rk.
 ### Usage
 
 Use standard settings:
-        `$('input').bootstrapMaterialDatePicker();`
+        `$('#your-date-input-field').bootstrapMaterialDatePicker();`
 	
 Define some extra settings:
-        `$('#date').bootstrapMaterialDatePicker({
+        `$('#your-date-input-field').bootstrapMaterialDatePicker({
 		format : 'dddd, DD. MMMM YYYY - HH:mm',
 		nowButton : true,
 		clearButton : false,
@@ -49,7 +49,9 @@ Define some extra settings:
 | **minDate**		| (String\|Date\|Moment)		| Minimum selectable date						|
 | **maxDate**		| (String\|Date\|Moment)		| Maximum selectable date						|
 | **currentDate**	| (String\|Date\|Moment)		| Initial Date									|
+| **year**			| Boolean						| true => Has Yearpicker						|
 | **date**			| Boolean						| true => Has Datepicker						|
+| **disabledDays**	| Array							| Array containing day indices (1-7) to disable	|
 | **time**			| Boolean						| true => Has Timepicker						|
 | **clearButton**	| Boolean						| true => Show Clear Button						|
 | **nowButton**		| Boolean						| true => Show Now Button						|
@@ -58,6 +60,9 @@ Define some extra settings:
 | **okText**		| String						| Text for the OK button (default: OK)			|
 | **clearText**		| String						| Text for the Clear button (default: Clear)	|
 | **nowText**		| String						| Text for the Now button (default: Now)		|
+| **triggerEvent**		| String						| Event to fire the calendar (default: focus)		|
+| **monthPicker**	| Boolean						| true => Act as monthpicker (hide calendar) (default: false) |
+
 
 
 ### Events
@@ -66,7 +71,10 @@ Define some extra settings:
 | ----------------- | ------------------------- | ------------------------------------------------- |
 | **beforeChange**	| event, date				| OK button is clicked								|
 | **change**		| event, date				| OK button is clicked and input value is changed	|
+| **yearSelected**	        | event, date			        | New year is selected								|
 | **dateSelected**	| event, date				| New date is selected								|
+| **open**	        | event				        | datepicker is opened								|
+| **close**	        | event				        | datepicker is closed								|
 
 
 ### Methods
@@ -79,5 +87,3 @@ Define some extra settings:
 | **setMinDate**	| (String\|Date\|Moment)	| Set minimum selectable date	|
 | **setMaxDate**	| (String\|Date\|Moment)	| Set maximum selectable date	|
 | **destroy**		| NULL						| Destroy the datepicker		|
-
-	
